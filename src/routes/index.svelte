@@ -156,21 +156,7 @@
     const index = Math.floor((360 - (degrees % 360)) / arcd);
     ctx.save();
 
-    const background = new Image();
-    background.src = options[index].image;
-    // Make sure the image is loaded first otherwise nothing will draw.
-    background.onload = function() {
-      console.log("loaded", background);
-      const ratio = canvasWidth / background.width;
-      const imageHeight = background.height * ratio;
-      ctx.drawImage(
-        background,
-        0,
-        canvasHalf - imageHeight / 2,
-        canvasWidth,
-        imageHeight
-      );
-      // ctx.drawImage(background, 0, 0);
+    const drawTitle = () => {
       const text = options[index].title;
       ctx.fillStyle = "white";
       ctx.shadowOffsetX = 2;
@@ -185,6 +171,28 @@
       );
       ctx.restore();
     };
+
+    if (options[index].image) {
+      const background = new Image();
+      background.src = options[index].image;
+      // Make sure the image is loaded first otherwise nothing will draw.
+      background.onload = function() {
+        console.log("loaded", background);
+        const ratio = canvasWidth / background.width;
+        const imageHeight = background.height * ratio;
+        ctx.drawImage(
+          background,
+          0,
+          canvasHalf - imageHeight / 2,
+          canvasWidth,
+          imageHeight
+        );
+        // ctx.drawImage(background, 0, 0);
+        drawTitle();
+      };
+    } else {
+      drawTitle();
+    }
   }
 
   function spin() {
@@ -231,33 +239,6 @@
 		width: 100%;
 		max-width: 400px;
 		margin: 0 0 1em 0;
-<<<<<<< HEAD
-	}
-
-	p {
-		margin: 1em auto;
-	}
-
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
-	}
-</style>
-
-<svelte:head>
-	<title>Sapper project template</title>
-</svelte:head>
-
-<h1>Great success!</h1>
-
-<figure>
-	<img alt='Borat' src='great-success.png'>
-	<figcaption>HIGH FIVE!</figcaption>
-</figure>
-
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
-=======
 	} */
 
   /* p {
@@ -305,9 +286,11 @@
 </svelte:head>
 
 <div class="wrapper" style="width:{canvasWidth}px">
-  <h1>Bad Movie Night</h1>
+  <h1>
+    <strike>Bad</strike>
+    Our Movie Night
+  </h1>
 
   <input on:click={spin} type="button" value="Roll the dice baby!" id="spin" />
   <canvas id="canvas" width={canvasWidth} height={canvasWidth} />
 </div>
->>>>>>> initial changes
