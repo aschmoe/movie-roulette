@@ -252,5 +252,7 @@ export function get(req, res) {
     },
   ];
 
+  movies.forEach((movie) => console.log(movie.title));
+
   return res.end(JSON.stringify(movies));
 }
