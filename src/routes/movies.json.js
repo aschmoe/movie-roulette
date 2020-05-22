@@ -142,13 +142,13 @@ export function get(req, res) {
     },
     {
       title: "Brynn: Solarbabies (1986)",
-    //   image:
-    //     "https://cdn.vox-cdn.com/thumbor/Y3jGf_my_Fh0anFCsad80q41u9s=/0x0:2500x400/1200x0/filters:focal(0x0:2500x400):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/8924493/1__mXLKRjsQ-yqRjP-bIb86g.0.jpeg",
-    // },
+      //   image:
+      //     "https://cdn.vox-cdn.com/thumbor/Y3jGf_my_Fh0anFCsad80q41u9s=/0x0:2500x400/1200x0/filters:focal(0x0:2500x400):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/8924493/1__mXLKRjsQ-yqRjP-bIb86g.0.jpeg",
+    },
     {
       title: "Brynn: 'Over the Top' (1987)",
       image:
-        "https://cdn.vox-cdn.com/thumbor/jIbUwn1f2j2FdYSX_iE9T2YNY9A=/0x0:2500x400/1200x0/filters:focal(0x0:2500x400):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/8924519/1_PC8rfJlKQ6ptbJLJoQEDvQ.0.jpeg"
+        "https://cdn.vox-cdn.com/thumbor/jIbUwn1f2j2FdYSX_iE9T2YNY9A=/0x0:2500x400/1200x0/filters:focal(0x0:2500x400):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/8924519/1_PC8rfJlKQ6ptbJLJoQEDvQ.0.jpeg",
     },
     {
       title: "Woody: Ace Ventura: When Nature Calls (1995)",
